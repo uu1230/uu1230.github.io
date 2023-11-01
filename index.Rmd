@@ -1,0 +1,20 @@
+---
+title: "My awesome website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# This is Jeff's awesome website
+
+Here's a gif of emo
+[link](https://p8105.com/)
+
+Heres's a link to the [about](about.html) page.
+
+![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+
+# New Section
+
+![](images/证件照.jpg)

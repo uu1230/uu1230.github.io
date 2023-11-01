@@ -10,8 +10,22 @@ output:
 
 ![](images/photo.jpg){width=400px}
 
-**I am currently a M.S. student in Environmental Health Data Science at Columbia University. Before this, I received a dual B.S. degree in Data Science at Duke University and Duke Kunshan University.**
+**I am currently a M.S. student in Environmental Health Data Science at Columbia University. **
 
+**Before this, I received a dual B.S. degree in Data Science at Duke University and Duke Kunshan University.**
 
+---
 
-*Feel free to visit my [about](about.html) page for more information.*
+## Contact Information
+
+**Address:**  
+620 W 153rd ST  
+New York, NY 10031
+
+**Email:**  
+youwu422@gmail.com
+
+**Phone:**  
+(332) 227-2511
+
+*Feel free to visit my [Education](education.html) page for more information.*

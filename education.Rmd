@@ -1,12 +1,12 @@
 ---
-title: "about"
+title: "Education"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# This is a about page
-The website is wonderful!
+# About Me
+
 
 

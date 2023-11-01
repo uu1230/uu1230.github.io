@@ -1,20 +1,17 @@
 ---
-title: "My awesome website"
+title: "Hi, I'm You Wu."
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# This is Jeff's awesome website
+# Welcome!
 
-Here's a gif of emo
-[link](https://p8105.com/)
+![](images/photo.jpg){width=400px}
 
-Heres's a link to the [about](about.html) page.
+**I am currently a M.S. student in Environmental Health Data Science at Columbia University. Before this, I received a dual B.S. degree in Data Science at Duke University and Duke Kunshan University.**
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
 
-# New Section
 
-![](images/证件照.jpg)
+*Feel free to visit my [about](about.html) page for more information.*

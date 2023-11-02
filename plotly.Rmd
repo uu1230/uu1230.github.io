@@ -49,7 +49,7 @@ ny_noaa %>%
     tavg = (tmax + tmin) / 2
   ) %>%
   filter(year == 2010) %>%
-  plot_ly(x = ~year_month, y = ~tavg, type = 'box') %>% 
+  plot_ly(x = ~year_month, y = ~tavg, color = ~year_month, type = 'box',colors = "viridis") %>% 
   layout(
     title = "Monthly Average Temperature in 2010",
     xaxis = list(title = "Date"),
@@ -61,7 +61,7 @@ ny_noaa %>%
 ny_noaa %>% 
   group_by(date) %>% 
   summarize(mprcp=mean(prcp)) %>% 
-  plot_ly(x = ~date, y = ~mprcp, type = "scatter", mode = "lines") %>% 
+  plot_ly(x = ~date, y = ~mprcp, type = "scatter", mode = "lines") %>%
   layout(
     title = list(text = "Average Daily Precipitation Over Time"),
     xaxis = list(

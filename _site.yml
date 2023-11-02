@@ -5,8 +5,8 @@ navbar:
   right:
     - text: "Education"
       href: education.html
-    - text: "Projects"
-      href: projects.html
+    - text: "Dashboard"
+      href: plotly.html
     - icon: fa-envelope fa-lg
       href: mailto:<youwu422@gmail.com>
     - icon: fa-github fa-lg

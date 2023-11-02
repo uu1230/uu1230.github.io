@@ -1,0 +1,44 @@
+---
+title: "Plotly Examples"
+output: 
+  html_document:
+    toc: true
+    toc_float: false
+---
+## Plotly Examples
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(dplyr)
+library(plotly)
+```
+
+```{r}
+data(ny_noaa)
+ny_noaa=ny_noaa %>% 
+  drop_na() %>% 
+  mutate(
+    tmax=as.numeric(tmax),
+    tmin=as.numeric(tmin)
+         )
+```
+
+```{r}
+ny_noaa %>% 
+  mutate(
+    year=format(date, "%Y"),
+    year=as.numeric(year)
+         ) %>% 
+  filter(snow>0 & prcp>0 & year== 2010) %>% 
+  mutate(text_label = str_c("Snowfall(mm):", snow, "\nSnow Depth(mm): ", snwd,"\nPrecipitation (tenths of mm): ",prcp)) %>% 
+  plot_ly(
+    x=~snwd,y=~snow,type="scatter",mode="markers",color=~prcp,text = ~text_label,alpha=0.7,opacity=0.7
+  ) %>% 
+  layout(
+    title = "Snowfall vs Snow Depth (2010)",
+    xaxis = list(title = "Snow Depth (mm)"),
+    yaxis = list(title = "Snowfall (mm)")
+  )
+```
+
+

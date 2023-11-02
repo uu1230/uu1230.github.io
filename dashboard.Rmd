@@ -1,17 +1,23 @@
 ---
-title: "Plotly Project"
+title: "Dashboard"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
 ---
-## NY NOAA Dataset
-```{r}
+
+```{r setup, include=FALSE}
+library(flexdashboard)
 library(tidyverse)
 library(p8105.datasets)
 library(dplyr)
 library(plotly)
 ```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
 
 ```{r}
 data(ny_noaa)
@@ -21,9 +27,6 @@ ny_noaa=ny_noaa %>%
     tmax=as.numeric(tmax),
     tmin=as.numeric(tmin)
          )
-```
-
-```{r}
 ny_noaa %>% 
   mutate(
     year=format(date, "%Y"),
@@ -39,7 +42,13 @@ ny_noaa %>%
     xaxis = list(title = "Snow Depth (mm)"),
     yaxis = list(title = "Snowfall (mm)")
   )
+
 ```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
 
 ```{r}
 ny_noaa %>%
@@ -57,6 +66,8 @@ ny_noaa %>%
   )  
 ```
 
+### Chart C
+
 ```{r}
 ny_noaa %>% 
   group_by(date) %>% 
@@ -71,3 +82,4 @@ ny_noaa %>%
     yaxis = list(title = "Average Precipitation (tenths of mm)")
   )
 ```
+

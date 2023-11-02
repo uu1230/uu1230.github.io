@@ -32,3 +32,7 @@ youwu422@gmail.com
 [github.com/uu1230](https://github.com/uu1230)
 
 *Feel free to visit my [Education](education.html) page for more information.*
+
+# Plotly Project
+
+Here you can find my [plotly](plotly.html) project.

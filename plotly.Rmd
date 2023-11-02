@@ -41,4 +41,33 @@ ny_noaa %>%
   )
 ```
 
+```{r}
+ny_noaa %>%
+  mutate(
+    year_month = format(date, "%Y-%m"),
+    year = as.numeric(format(date, "%Y")),
+    tavg = (tmax + tmin) / 2
+  ) %>%
+  filter(year == 2010) %>%
+  plot_ly(x = ~year_month, y = ~tavg, type = 'box') %>% 
+  layout(
+    title = "Monthly Average Temperature in 2010",
+    xaxis = list(title = "Date"),
+    yaxis = list(title = "Average Temperature (C)")
+  )  
+```
 
+```{r}
+ny_noaa %>% 
+  group_by(date) %>% 
+  summarize(mprcp=mean(prcp)) %>% 
+  plot_ly(x = ~date, y = ~mprcp, type = "scatter", mode = "lines") %>% 
+  layout(
+    title = list(text = "Average Daily Precipitation Over Time"),
+    xaxis = list(
+      title = "Date",
+      showgrid = FALSE
+    ),
+    yaxis = list(title = "Average Precipitation (tenths of mm)")
+  )
+```
